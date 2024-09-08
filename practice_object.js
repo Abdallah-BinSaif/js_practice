@@ -37,7 +37,43 @@ const car = {
     model : "Corolla",
     year: 2020
 }
-car.passenger = 5;
+// car.passenger = 5;
 car['passenger'] = 5;
-console.log(car)
+// console.log(car)
 
+
+/**
+ * 
+ *  P3 ------->
+ * 
+ */
+
+
+const students = {
+    name: "Hamim Sakep",
+    id: 5421,
+    physics: {
+        subject: "HSC Physics",
+        author: "Shahjahan Tapan",
+        marks: 30,
+        attendence: '80%'
+    }
+};
+
+// console.log(students["physics"]["marks"])
+
+/**
+ * 
+ * // P4 ----->
+ * 
+ */
+
+let student = {
+    name: "Ariana Grande",
+    age: 21,
+    city: "Gaibandha",
+    isStudent: true
+};
+
+// console.log(Object.keys(student).length)
+console.log(Object.keys(students["physics"]).length)
