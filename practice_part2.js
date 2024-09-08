@@ -20,4 +20,32 @@ function woodQuantity (chairQuantity, tableQuantity, bedQuantity) {
 }
 
 const woodTotal = woodQuantity(2, 3, 5);
-console.log(woodTotal);
+// console.log(woodTotal);
+
+
+/**
+ * const products = [
+    { name: 'shampoo', price: 300 },
+    { name: 'chiruni', price: 100 },
+    { name: 'shirt', price: 700 },
+    { name: 'pant', price: 1200 }
+]
+ */
+
+const products = [
+    {name: "shampoo", price: 300},
+    {name: "chiruni", price: 100},
+    {name: "shirt", price: 700},
+    {name: "pant", price: 1200}
+]
+
+function productsPrice (products) {
+    let total = 0;
+    for (const product of products) {
+        total = total + product["price"]
+    };
+    return total;
+}
+
+const totalPrice = productsPrice(products)
+console.log(totalPrice)
