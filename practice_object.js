@@ -76,4 +76,23 @@ let student = {
 };
 
 // console.log(Object.keys(student).length)
-console.log(Object.keys(students["physics"]).length)
+// console.log(Object.keys(students["physics"]).length)
+
+/**
+ * 
+ * P5 ----->
+ * 
+ */
+
+let myObject = {
+    name: "John Doe",
+    age: 25,
+    city: "Example City",
+    isStudent: true
+};
+
+for (const key in myObject) {
+
+    console.log(`key: ${key} | type: ${typeof myObject[key]}`);
+}
+
