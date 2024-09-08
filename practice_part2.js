@@ -78,4 +78,33 @@ function shoppingCart(products) {
 };
 
 const totalShop = shoppingCart(products1)
-console.log(totalShop);
+// console.log(totalShop);
+
+
+/**
+ * upto 100: ---> 100
+ * more than 101-200: --> 90
+ * more than 200: --> 70
+*/
+
+const quantity = 201;
+function discount (quantity) {
+    
+    const priceUpto100 = 100;
+    const priceUpto200 = 90;
+    const priceMoreThan200 = 70;
+    if (quantity <= 100) {
+        price = quantity * priceUpto100
+        return price;
+    } else if (quantity <= 200) {
+        price = quantity * priceUpto200
+        return price;
+    } else if (quantity > 200) {
+        price = quantity * priceMoreThan200
+        return price;
+    }
+
+};
+
+const discountedPrice = discount(quantity);
+console.log(discountedPrice);
