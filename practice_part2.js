@@ -107,4 +107,33 @@ function discount (quantity) {
 };
 
 const discountedPrice = discount(quantity);
-console.log(discountedPrice);
+// console.log(discountedPrice);
+
+
+function layeredDiscount (quantity) {
+    const priceUpto100 = 100;
+    const priceUpto200 = 90;
+    const priceMoreThan200 = 70;
+
+    if(quantity <= 100) {
+        const result = priceUpto100 * quantity;
+        return result;
+    }else if (quantity <= 200) {
+        const priceBefore100 = 100 * priceUpto100;
+        const newQuantity = quantity - 100;
+        const priceBefore200 = newQuantity * priceUpto200;
+        const result = priceBefore100 + priceBefore200;
+        return result;
+    }else if (quantity > 200) {
+        const priceBefore100 = 100 * priceUpto100;
+        const priceBefore200 = 100 * priceUpto200
+        const newQuantity = quantity - 200;
+        const priceAbove200 = newQuantity * priceMoreThan200;
+        const result = priceBefore100 + priceBefore200 + priceAbove200;
+        return result;
+    }
+}
+
+const LayerDiscount = layeredDiscount(quantity);
+console.log(LayerDiscount)
+
