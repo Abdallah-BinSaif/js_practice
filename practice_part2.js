@@ -135,5 +135,49 @@ function layeredDiscount (quantity) {
 }
 
 const LayerDiscount = layeredDiscount(quantity);
-console.log(LayerDiscount)
+// console.log(LayerDiscount)
 
+
+/**
+ * 
+ * // Calculator
+ * 
+ */
+
+function add(a, b) {
+    const result = a + b;
+    return result;
+};
+function subtract (a, b) {
+    const result = a - b;
+    return result;
+};
+function multiplication (a, b) {
+    const result = a * b;
+    return result;
+}
+function divition (a, b) {
+    const result = a / b;
+    return result;
+}
+
+function calculator (a, b, operation) {
+    if (operation === "add") {
+        const result = add(a, b);
+        return result;
+    }else if (operation === "subtract") {
+        const result = subtract(a, b)
+        return result;
+    }else if (operation === "multiplication") {
+        const result = multiplication(a, b);
+        return result;
+    }else if (operation === "divition") {
+        const result = divition(a, b);
+        return result;
+    }else {
+        console.log(`Only "add", "subtract", "multiplication" or "divition" are allowed`)
+    }
+}
+
+const addition = calculator(3,5, "divitio")
+console.log(addition)
