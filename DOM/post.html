@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Comment</title>
+  </head>
+  <body>
+    <h1>Post Your Comment</h1>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad
+        minima modi sint fugit. Nam quae perspiciatis aliquam atque. Labore
+        nulla quis consequatur laborum, laudantium aliquid. Architecto libero
+        laborum odio sed ratione vero, excepturi ut, quia modi incidunt atque
+        eaque animi iure velit doloribus et quibusdam, quasi nihil accusamus
+        quae!
+      </p>
+      <p>
+        Quo accusamus, in, inventore optio repellendus, cumque iste fugit nihil
+        est non officia nam mollitia illum rerum molestias laboriosam veniam
+        voluptatem earum voluptatibus nostrum quam officiis consectetur natus!
+        Rerum possimus aperiam voluptatum et ad atque suscipit, saepe numquam
+        sint ratione. Alias magnam quibusdam quidem quia. Deserunt architecto
+        repellat exercitationem rerum!
+      </p>
+      <p>
+        Accusamus officia dolorem similique iure ipsa obcaecati suscipit,
+        voluptas qui illo debitis vero perferendis est architecto laboriosam
+        nemo quaerat explicabo voluptatum nisi neque! Odit recusandae eveniet
+        minima placeat sit id, sint explicabo doloremque dolores deserunt quas
+        laboriosam minus inventore consequuntur commodi reiciendis ipsam
+        laudantium, labore ea culpa voluptas suscipit asperiores.
+      </p>
+    </div>
+    <textarea name="" id="text-area" placeholder="Your Comment" rows="7" cols="40"></textarea>
+    <br>
+    <button id="post">Post</button>
+    <script>
+      const p = document.getElementsByTagName("p");
+      console.log(p);
+      for (const i of p) {
+        i.style.backgroundColor = "pink";
+        i.style.padding = "10px";
+      }
+      document.getElementById("post").addEventListener("click", function(){
+        const comment = document.getElementById("text-area").value;
+        const p1 = document.createElement("p")
+        p1.append(comment)
+        document.getElementsByTagName("div").item(0).appendChild(p1)
+        document.getElementById("text-area").value = ""
+      })
+
+
+
+    </script>
+    <script src="./post.js"></script>
+  </body>
+</html>
