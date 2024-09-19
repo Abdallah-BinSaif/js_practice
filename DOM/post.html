@@ -43,16 +43,6 @@
         i.style.backgroundColor = "pink";
         i.style.padding = "10px";
       }
-      document.getElementById("post").addEventListener("click", function(){
-        const comment = document.getElementById("text-area").value;
-        const p1 = document.createElement("p")
-        p1.append(comment)
-        document.getElementsByTagName("div").item(0).appendChild(p1)
-        document.getElementById("text-area").value = ""
-      })
-
-
-
     </script>
     <script src="./post.js"></script>
   </body>
