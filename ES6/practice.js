@@ -135,5 +135,34 @@ let data2 = {
         ]
 }
 
-console.log(data2['data'][0]['bookDetails']['name'])
-console.log(data2['data'][1]['bookCategory'])
+// console.log(data2['data'][0]['bookDetails']['name'])
+// console.log(data2['data'][1]['bookCategory'])
+
+
+const oddArray = [1,3,5,7,9];
+const evenArray = []
+for(const array of oddArray){
+    if(array % 2 === 1){
+        evenArray.push(array+1);
+    }
+}
+// console.log(evenArray)
+
+const evenArray2 = oddArray.map(num => num++);
+// console.log(evenArray2)
+
+
+const numbers = [33, 50, 79, 78, 90,101, 30];
+
+const divisibleByTen = numbers.filter(num => num%10 === 0)
+
+// console.log(divisibleByTen)
+
+
+const instructors = [
+    {name: 'Nodi', age: 28, position: 'Senior'},
+    {name: 'Aki', age: 26, position: 'Junior'},
+    {name: 'Shobuj', age: 30, position: 'Senior'}
+]
+const seniorInstructor = instructors.filter(singleInstructor => singleInstructor["position"] === "Senior")
+console.log(seniorInstructor)
