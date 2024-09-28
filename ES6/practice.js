@@ -165,4 +165,16 @@ const instructors = [
     {name: 'Shobuj', age: 30, position: 'Senior'}
 ]
 const seniorInstructor = instructors.filter(singleInstructor => singleInstructor["position"] === "Senior")
-console.log(seniorInstructor)
+// console.log(seniorInstructor)
+
+const people = [
+    {name: 'Meena', age: 20},
+    {name: 'Rina', age: 15},
+    {name: 'Suchorita', age: 22}
+];
+
+
+const totalAges = people.reduce((previousValue, current) => current.age + previousValue, 0)
+// console.log(totalAges)
+
+
