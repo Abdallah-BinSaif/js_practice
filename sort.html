@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Example</title>
+</head>
+<body>
+    <h1>Sort Example</h1>
+    <button onclick="sortArray()">Sort Numbers</button>
+    <ul id="numberList">
+        <li>35</li>
+        <li>10</li>
+        <li>25</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        function sortArray() {
+            // let list = document.querySelectorAll("#numberList li");
+            let list = document.querySelectorAll("#numberList li");
+            
+            // let arr = Array.from(list).map(item => parseInt(item.innerText));
+            let arr = Array.from(list).map(item => parseInt(item.innerText));
+            
+            arr.sort((a, b) => a - b); // Sorting numerically
+            // arr.sort((a,b) => b, )
+            console.log(arr)
+            
+            // Updating the list in the DOM
+            const ul = document.getElementById("numberList");
+            ul.innerHTML = ""; // Clear the list
+            arr.forEach(num => {
+                const li = document.createElement("li");
+                li.textContent = num;
+                ul.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

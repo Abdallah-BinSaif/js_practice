@@ -155,6 +155,9 @@ const evenArray2 = oddArray.map(num => num++);
 const numbers = [33, 50, 79, 78, 90,101, 30];
 
 const divisibleByTen = numbers.filter(num => num%10 === 0)
+const findHundred = numbers.find(num => num = 100)
+// const findHundred = numbers.includes(33)
+console.log(findHundred)
 
 // console.log(divisibleByTen)
 
