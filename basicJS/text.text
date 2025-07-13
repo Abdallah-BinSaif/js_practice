@@ -1,0 +1,11 @@
+> Data Structures: Using arrays of objects to represent complex data.
+
+> Object Modification: Adding, updating, and deleting properties using dot and bracket notation.
+
+> Array Methods: push, pop (implied from earlier practice), unshift (implied), shift (implied), indexOf, includes, splice, find, some, filter, findIndex.
+
+> Object Static Methods: Object.keys, Object.values, Object.entries.
+
+> Loops: for...of for iterating over arrays.
+
+> Conditional Logic: if/else for various checks.
